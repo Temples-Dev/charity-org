@@ -3,6 +3,10 @@ import React from "react";
 import Accordion from "./Accordion";
 
 const Faqs = () => {
+
+  const [message, setMessage] = React.useState("")
+  const [email, setEmail] = React.useState("")
+
   const accordionItems = [
     { title: "Section 1", content: "Content for Section 1" },
     { title: "Section 2", content: "Content for Section 2" },
@@ -12,9 +16,25 @@ const Faqs = () => {
     { title: "Section 6", content: "Content for Section 6" },
   ];
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     // TODO
+   
   };
+ 
+  const handleEmail = (e) => {
+      setEmail(e.target.value)
+     
+      console.log(e.target.value)
+    
+  }
+ 
+  const handleMessage = (e) => {
+    setMessage(e.target.value)
+    console.log(e.target.value)
+  }
+
+ 
+
 
   return (
     <div className=" h-screen flex  gap-12 px-12 justify-center items-center border-t-0 shadow-3xl border-orange-500">
@@ -37,11 +57,13 @@ const Faqs = () => {
           with you as soon as possible
         </p>
 
-        <form action="" method="post" className="flex flex-col gap-4">
+        <form action="" method="post" className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"
             id="email"
+            value={email}
+            onChange={handleEmail}
             placeholder="please enter your email address"
             className="border py-2 px-3 text-slate-400 outline-none focus:outline-orange-500 focus:outline-1"
           />
@@ -53,11 +75,13 @@ const Faqs = () => {
             cols="20"
             rows="8"
             placeholder="please enter your enquiry"
+            value={message}
+            onChange={handleMessage}
           ></textarea>
 
           <button
             className=" bg-orange-600 hover:bg-orange-700 py-2 px-4 rounded-xl text-white"
-            onClick={handleSubmit}
+           
           >
             Submit
           </button>

@@ -13,7 +13,7 @@ const Accordion = ({ items }) => {
       {items.map((item, index) => (
         <div key={index} className="mb-2">
           <div
-            className="bg-gray-200 p-2 cursor-pointer rounded-md"
+            className="bg-gray-500 p-2 cursor-pointer rounded-md text-white"
             onClick={() => toggleAccordion(index)}
           >
             <div className="flex justify-between items-center">
