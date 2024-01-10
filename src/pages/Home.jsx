@@ -1,12 +1,12 @@
 import React from "react";
-import Header from "../Header";
-import Hero from "../Hero";
-import Card from "../Card";
-import WelcomeMsg from "../WelcomeMsg";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Card from "../components/Card";
+import WelcomeMsg from "../components/WelcomeMsg";
 import { LuHeartHandshake } from "react-icons/lu";
-import Volunteers from "../Volunteers";
-import Footer from "../Footer";
-import Faqs from "../Faqs";
+import Volunteers from "../components/Volunteers";
+import Footer from "../components/Footer";
+import Faqs from "../components/Faqs";
 
 const Home = () => {
   return (
